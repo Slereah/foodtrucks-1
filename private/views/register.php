@@ -1,6 +1,7 @@
 <?php
 
 // Definition des variables par défaut
+$token = null;
 $login       = null;
 $password    = null;
 $firstname   = null;
@@ -12,13 +13,17 @@ $birth_year  = null;
 
 // Cas où l'utilisateur envoie le formulaire (méthode POST)
 // Contrôle du formulaire
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+{
+    echo "LE FORMULAIRE EST ENVOYE";
+    var_dump($_SESSION['token']);
+    var_dump($_POST['token']);
 }
 
 // Cas où l'utilisateur arrive sur la page sans envoyer le formulaire (méthode GET)
-else {
-
+else 
+{
+    $_SESSION['token'] = getToken();
 }
 ?>
 

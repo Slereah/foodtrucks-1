@@ -1,9 +1,11 @@
 <?php
 include_once '../private/app/config.php';
 include_once '../private/app/routes.php';
+include_once '../private/app/autoload.php';
 
-include_once '../private/functions/flashbag.php';
 
+autoload(FUNCTIONS_DIRECTORY, FUNCTION_FILES);
+//autoload(MODELS_DIRECTORY, MODELS_FILES);
 
 // --------------------
 // CONFIG PHP
@@ -65,6 +67,9 @@ if (!array_key_exists($page, $router)) {
     $page = "404";
 }
 
+function getToken() {
+    return md5(uniqid());
+}
 
 
 // --------------------
@@ -80,3 +85,4 @@ if (
     header("location: index.php?page=login");
     exit;
 }
+
