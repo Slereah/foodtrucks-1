@@ -28,11 +28,21 @@ define("MODE", "dev"); // dev | prod
 
 // -- Directories
 define("VIEWS_DIRECTORY", "../private/views/");
+define("FUNCTIONS_DIRECTORY", "../private/functions/");
+define("MODELS_DIRECTORY", "../private/models/");
 
+define("MODELS_FILES", "/^mdl-.*\.php$/i");
+define("FUNCTION_FILES", "/^fnc-.*\.php$/i");
 
+define("ROLES_GLUE", ",");
+
+define("ROLE_USER", "USER");
+define("ROLE_ADMIN", "ADMIN");
 
 // --------------------
 // DEFAULT VARS
 // --------------------
 
 $default_page = "home";
+$default_lang = "fr";
+$default_users_roles = [ROLE_USER];

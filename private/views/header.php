@@ -23,7 +23,7 @@
             <a href="index.php?page=register">Inscription</a>
             <a href="index.php?page=login">Connexion</a>
             <?php else: ?>
-            <a href="index.php?page=profile">UserName</a>
+            <a href="index.php?page=profile"><?php echo (isset($_SESSION['user']['firstname'])?$_SESSION['user']['firstname']:"UserName");?></a>
             <?php endif; ?>
 
         </nav>

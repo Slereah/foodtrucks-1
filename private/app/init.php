@@ -4,8 +4,9 @@ include_once '../private/app/routes.php';
 include_once '../private/app/autoload.php';
 
 
+
 autoload(FUNCTIONS_DIRECTORY, FUNCTION_FILES);
-//autoload(MODELS_DIRECTORY, MODELS_FILES);
+autoload(MODELS_DIRECTORY, MODELS_FILES);
 
 // --------------------
 // CONFIG PHP
